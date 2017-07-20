@@ -1,5 +1,6 @@
 package codesquad_stringstat;
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -11,7 +12,7 @@ import java.util.TreeSet;
 
 public class App {
 	
-	static final String inputSentence = "Do you know Doctor who?";
+	//static final String inputSentence = "Do you know Doctor who?";
 	
 	
 	
@@ -19,6 +20,10 @@ public class App {
 	public static void main (String args[]) {
 		HashMap<String, Integer> alphabetCount = new HashMap();
 		List<String> sortedCount = new ArrayList();
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("영문장을 입력하시오:");
+		String inputSentence = input.nextLine();
 		
 		String processedSentence = inputSentence.replaceAll("\\?", "");
 		String countSentence = processedSentence.replaceAll(" ", "");
