@@ -13,7 +13,9 @@ import java.util.TreeSet;
 public class App {
 	
 	//static final String inputSentence = "Do you know Doctor who?";
-	
+	static final String specialChar =  "[^\uAC00-\uD7A3xfe0-9a-zA-Z\\s]";
+
+
 	
 	
 	
@@ -25,7 +27,7 @@ public class App {
 		System.out.println("영문장을 입력하시오:");
 		String inputSentence = input.nextLine();
 		
-		String processedSentence = inputSentence.replaceAll("\\?", "");
+		String processedSentence = inputSentence.replaceAll(specialChar, "");
 		String countSentence = processedSentence.replaceAll(" ", "");
 		String [] words = processedSentence.split(" ");
 		String [] letters = countSentence.toLowerCase().split("");
