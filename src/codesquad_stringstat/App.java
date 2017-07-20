@@ -29,7 +29,7 @@ public class App {
 		String countSentence = processedSentence.replaceAll(" ", "");
 		String [] words = processedSentence.split(" ");
 		String [] letters = countSentence.toLowerCase().split("");
-		words[0] += "?";
+		//words[0] += "?";
 		for (int i = 0; i < words.length; i++) {
 			
 			System.out.print(words[words.length - i - 1] + " ");
